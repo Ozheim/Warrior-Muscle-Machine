@@ -6,7 +6,7 @@ import Videobackground from "./components/Videobackground";
 function App() {
   return (
     <BrowserRouter>
-      <Videobackground />
+      <Home />
     </BrowserRouter>
   );
 }

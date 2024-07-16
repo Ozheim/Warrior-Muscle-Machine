@@ -14,7 +14,6 @@ export default function Example() {
 
   return (
     <div className="relative">
-      <Videobackground />
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -41,7 +40,7 @@ export default function Example() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold leading-6 text-gray-200"
               >
                 {item.name}
               </a>
@@ -50,7 +49,7 @@ export default function Example() {
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <a
               href="#"
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-gray-100"
             >
               Se connecter <span aria-hidden="true">&rarr;</span>
             </a>
@@ -93,7 +92,7 @@ export default function Example() {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-zinc-50 hover:bg-gray-50"
                   >
                     Se connecter
                   </a>
@@ -104,13 +103,15 @@ export default function Example() {
         </Dialog>
       </header>
 
+      <Videobackground />
+
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
           <div className="text-center pt-8">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-200 sm:text-6xl">
               Suivez et automatisez votre progression en musculation
             </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
+            <p className="mt-6 text-lg leading-8 text-zinc-100">
               Optimisez vos entraînements et atteignez vos objectifs plus
               rapidement grâce à notre application innovante. Suivez vos
               progrès, personnalisez vos routines et laissez notre technologie
@@ -125,7 +126,7 @@ export default function Example() {
               </a>
               <a
                 href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="text-sm font-semibold leading-6 text-gray-400"
               >
                 en apprendre plus <span aria-hidden="true">→</span>
               </a>
