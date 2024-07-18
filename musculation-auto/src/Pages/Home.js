@@ -4,6 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import WMM from "../assets/WMM.png";
 import Videobackground from "../components/Videobackground";
 import { Link } from "react-router-dom";
+import bgvideo from "../assets/bgvideo.mp4";
 
 const navigation = [
   { name: "Accueil", href: "#" },
@@ -104,7 +105,7 @@ export default function Example() {
         </Dialog>
       </header>
 
-      <Videobackground />
+      <Videobackground videoSrc={bgvideo} />
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
