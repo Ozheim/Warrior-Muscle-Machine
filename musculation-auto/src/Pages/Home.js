@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 import bgvideo from "../assets/bgvideo.mp4";
 
 const navigation = [
-  { name: "Accueil", href: "#" },
-  { name: "A propos", href: "#" },
+  { name: "Accueil", href: "/Home" },
+  { name: "A propos", href: "/About" },
 ];
 
 export default function Example() {

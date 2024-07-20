@@ -2,7 +2,7 @@ import WMM from "../assets/WMM.png";
 import Videobackground from "../components/Videobackground";
 import bgLogin from "../assets/background_vidéo_3.mp4";
 
-export default function Example() {
+export default function Login() {
   return (
     <>
       <Videobackground videoSrc={bgLogin} />
