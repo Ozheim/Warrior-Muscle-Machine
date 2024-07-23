@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/components/Footer.scss";
 
-const Footer = () => {
-  const [isActive, setIsActive] = useState(false);
-  const AccordionFooter = (
+export function Footer() {
+  return (
     <div className="footer-container">
       <>
         <div className="Newsletter">
@@ -22,16 +21,6 @@ const Footer = () => {
       </>
     </div>
   );
-
-  return (
-    <>
-      <div className="accordion-title" onClick={() => setIsActive(!isActive)}>
-        <div>YOOO </div>
-        <div>+</div>
-      </div>
-      {isActive && <div className="accordion">{AccordionFooter}</div>}
-    </>
-  );
-};
+}
 
 export default Footer;

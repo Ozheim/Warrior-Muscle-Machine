@@ -5,6 +5,7 @@ import WMM from "../assets/WMM.png";
 import Videobackground from "../components/Videobackground";
 import { Link } from "react-router-dom";
 import bgvideo from "../assets/bgvideo.mp4";
+import Accordion from "../components/Accordion";
 
 const navigation = [
   { name: "Accueil", href: "/Home" },
@@ -136,6 +137,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      <Accordion />
     </div>
   );
 }
