@@ -6,6 +6,7 @@ import Videobackground from "../components/Videobackground";
 import { Link } from "react-router-dom";
 import bgvideo from "../assets/bgvideo.mp4";
 import Accordion from "../components/Accordion";
+import "../Styles/Pages/Home.scss";
 
 const navigation = [
   { name: "Accueil", href: "/Home" },
@@ -16,7 +17,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="test">
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           aria-label="Global"
@@ -109,7 +110,7 @@ export default function Example() {
       <Videobackground videoSrc={bgvideo} />
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div className="mx-auto max-w-2xl pt-32 sm:pt-48 lg:pt-56 pb-32 sm:pb-48 lg:pb-36">
           <div className="text-center pt-8">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-200 sm:text-6xl">
               Suivez et automatisez votre progression en musculation
