@@ -1,10 +1,82 @@
-.footer-container{
-    height: 507px;
+.footer-container {
+    height: 30vh;
     width: 100%;
+    background-color: #283148;
+
+        .link-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            height: 45%;
+            color: white;
+            gap: 50px;
+        }
+
+        .social-media-list{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            color: white;
+            cursor: pointer;
+        }
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
     background-color: #081318;
 
-   
+    form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
 
-    
+        label{
+            display: flex;
+            align-items: center;
+            padding: 0 20px ;
+            color: white;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+           
+            justify-content: center;
+         
+
+            input {
+                
+                height: 50px;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                border: none;
+                padding: 0 15px;
+                outline: none;
+            }
+
+            button {
+                height: 50px;
+                width: 50px;
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                border: none;
+                background-color: #283148;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #3b4a60;
+                }
+            }
+        }
+    }
 }
+
 
