@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <>
-      <img
-        src={OurMission}
-        alt="une image en fond qui montre des sportifs"
-        className="background-image"
-      />
+      <div className="pd">
+        <img
+          src={OurMission}
+          alt="une image en fond qui montre des sportifs"
+          className="background-image"
+        />
+      </div>
       <div className="hover-login">
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
