@@ -2,6 +2,7 @@ import WMM from "../assets/WMM.png";
 import Videobackground from "../components/Videobackground";
 import OurMission from "../assets/background_login.jpg";
 import "../Styles/Pages/Login.scss";
+import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <>
@@ -49,12 +50,11 @@ export default function Login() {
                     Mot de passe
                   </label>
                   <div className="text-sm">
-                    <a
-                      href="#"
-                      className="font-semibold text-indigo-600 hover:text-indigo-500"
-                    >
-                      Mot de passe oublié ?
-                    </a>
+                    <Link to="/PasswordForgotten">
+                      <a className="font-semibold text-indigo-600 hover:text-indigo-500">
+                        Mot de passe oublié ?
+                      </a>
+                    </Link>
                   </div>
                 </div>
                 <div className="mt-2">
@@ -81,12 +81,11 @@ export default function Login() {
 
             <p className="mt-10 text-center text-sm text-gray-500">
               Pas inscrit?{" "}
-              <a
-                href="#"
-                className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-              >
-                Creer un compte
-              </a>
+              <Link to="/Registration">
+                <a className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                  Creer un compte
+                </a>
+              </Link>
             </p>
           </div>
         </div>
