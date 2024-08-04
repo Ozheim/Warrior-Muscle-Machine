@@ -1,7 +1,8 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./AppsRouter";
-import Footer from "./components/Footer";
+
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   return (

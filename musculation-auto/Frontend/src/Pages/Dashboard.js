@@ -1,12 +1,19 @@
 import Sidebar from "../components/Sidebar";
+import "../Styles/Pages/Dashboard.scss";
+import WMM from "../assets/WMM.png";
 
 import React, { Component } from "react";
 
 class Dashboard extends Component {
   render() {
     return (
-      <div>
-        <Sidebar />
+      <div className="ff">
+        <div className="test">
+          <img src={WMM} alt="logo" className="logo" />
+        </div>
+        <>
+          <Sidebar />
+        </>
       </div>
     );
   }
