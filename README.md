@@ -2,12 +2,6 @@ Mon Projet Web
 C'est quoi ?
 Un projet que j'ai fait en utilisant React et Tailwind CSS. C'est surtout pour m'entraîner avec ces technos.
 
-Comment lancer le projet
-Télécharge le projet :
-
-git clone <url-du-repo>
-cd <nom-du-dossier>
-
 Installe les trucs nécessaires :
 Dépendances principales :
 @fortawesome/fontawesome-svg-core
