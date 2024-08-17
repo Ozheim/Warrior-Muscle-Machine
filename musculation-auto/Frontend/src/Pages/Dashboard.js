@@ -8,7 +8,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="ff">
-        <div className="test">
+        <div className="header-dashboard">
           <img src={WMM} alt="logo" className="logo" />
         </div>
         <>
