@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import "../Styles/Pages/Resetpassword.scss";
 import Backgroundimage from "../assets/Reset_Password.png";
 
-export default function PasswordForgotten() {
+export default function forgotPassword() {
   return (
     <div class="main-container">
       <img
@@ -11,16 +11,16 @@ export default function PasswordForgotten() {
         className="background-image-rs"
       />
       <section>
-        <div class="max-w-lg mx-auto my-10 bg-white p-8 rounded-xl shadow shadow-slate-300">
-          <h1 class="text-4xl font-medium">Reinitialiser le mot de passe</h1>
-          <p class="text-slate-500">
+        <div class="max-w-lg mx-auto my-10 bg-gray-800 p-8 rounded-xl shadow shadow-slate-300 text-white">
+          <h1 class="text-4xl font-medium">Mise à jour du mot de passe</h1>
+          <p class="text-white pt-5">
             Remplissez le formulaire pour réinitialiser le mot de passe
           </p>
 
           <form action="" class="my-10">
             <div class="flex flex-col space-y-5">
               <label for="email">
-                <p class="font-medium text-slate-700 pb-2">Adresse Email</p>
+                <p class="font-medium text-white pb-2">Adresse Email</p>
                 <input
                   id="email"
                   name="email"

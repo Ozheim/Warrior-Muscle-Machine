@@ -18,11 +18,11 @@ export default function Navbar() {
   const navClasses = classNames(
     "flex items-center justify-between p-6 lg:px-8",
     {
-      "bg-transparent": location.pathname === "/Home",
-      "bg-gray-900": location.pathname !== "/Home",
+      "bg-transparent":
+        location.pathname === "/" || location.pathname === "/Home",
+      "bg-gray-900": location.pathname !== "/" && location.pathname !== "/Home",
     }
   );
-
   return (
     <div className="test">
       <header className="absolute inset-x-0 top-0 z-50">

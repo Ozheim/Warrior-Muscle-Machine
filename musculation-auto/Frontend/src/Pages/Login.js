@@ -1,5 +1,4 @@
 import WMM from "../assets/WMM.png";
-import Videobackground from "../components/Videobackground";
 import OurMission from "../assets/background_login.jpg";
 import "../Styles/Pages/Login.scss";
 import { Link } from "react-router-dom";
@@ -52,7 +51,7 @@ export default function Login() {
                     Mot de passe
                   </label>
                   <div className="text-sm">
-                    <Link to="/PasswordForgotten">
+                    <Link to="/forgotPassword">
                       <a className="font-semibold text-indigo-600 hover:text-indigo-500">
                         Mot de passe oublié ?
                       </a>
