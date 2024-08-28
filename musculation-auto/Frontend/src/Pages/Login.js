@@ -1,13 +1,15 @@
 import WMM from "../assets/WMM.png";
 import OurMission from "../assets/background_login.jpg";
 import "../Styles/Pages/Login.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const signin = async (event) => {
     event.preventDefault();
@@ -20,6 +22,7 @@ export default function Login() {
       console.log(response.data);
 
       localStorage.setItem("token", response.data.token);
+      navigate(`/Dashboard/${response.data.userId}`);
     } catch (error) {
       console.log(error);
     }

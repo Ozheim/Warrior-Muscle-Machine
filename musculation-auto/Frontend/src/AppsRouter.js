@@ -16,7 +16,7 @@ function Approuter() {
       <Route path="/Registration" element={<Registration />} />
       <Route path="/forgotPassword" element={<ResetPassword />} />
       <Route path="/" element={<Home />} />
-      <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Dashboard/:userId" element={<Dashboard />} />
       <Route path="*" element={<Notfound />} />
       <Route path="/About" element={<About />} />
     </Routes>
