@@ -3,11 +3,9 @@ import "../Styles/Pages/Dashboard.scss";
 import WMM from "../assets/WMM.png";
 import InitialDashboard from "../components/initialdashboard.js";
 import React, { useState, useEffect } from "react";
-import Modal from "../components/modal.js";
 import MainDashboard from "../components/MainDashboard.js";
 
 const Dashboard = () => {
-  const [showModal, setShowModal] = useState(false);
   const [hasSessions, setHasSessions] = useState(null);
   const token = localStorage.getItem("token");
 
@@ -28,9 +26,6 @@ const Dashboard = () => {
       });
   }, [token]);
 
-  const openModal = () => setShowModal(true);
-  const closeModal = () => setShowModal(false);
-
   return (
     <div className="ff">
       <div className="header-dashboard">
@@ -38,12 +33,7 @@ const Dashboard = () => {
       </div>
       <Sidebar />
 
-      {hasSessions ? (
-        <MainDashboard openModal={openModal} />
-      ) : (
-        <InitialDashboard onAddSession={openModal} />
-      )}
-      <Modal isOpen={showModal} onClose={closeModal}></Modal>
+      {hasSessions ? <MainDashboard /> : <InitialDashboard />}
     </div>
   );
 };
