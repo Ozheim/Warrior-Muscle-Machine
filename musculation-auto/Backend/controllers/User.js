@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const workoutsession = require("../models/Workoutsession");
 
 exports.signup = (req, res, next) => {
   bcrypt
@@ -51,4 +52,21 @@ exports.login = (req, res, next) => {
     .catch((error) =>
       res.status(500).json({ message: "Error during user search." })
     );
+};
+
+exports.checkSessionExists = async (req, res) => {
+  try {
+    const userId = req.auth.userId;
+
+    const session = await workoutsession.findOne({ userId: userId });
+
+    if (session) {
+      res.json({ sessionExists: true });
+    } else {
+      res.json({ sessionExists: false });
+    }
+  } catch (err) {
+    console.error("Erreur lors de la vérification des sessions:", err);
+    res.status(500).json({ error: "Erreur du serveur" });
+  }
 };

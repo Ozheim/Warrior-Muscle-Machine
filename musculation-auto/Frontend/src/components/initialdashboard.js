@@ -1,6 +1,6 @@
 import React from "react";
 
-const initialdashboard = (props) => {
+const InitialDashboard = (props) => {
   return (
     <div>
       <div className="welcome-message">
@@ -11,3 +11,5 @@ const initialdashboard = (props) => {
     </div>
   );
 };
+
+export default InitialDashboard;

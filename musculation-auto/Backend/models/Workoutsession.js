@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const workoutSessionSchema = new mongoose.schema({
-  Userid: { type: String, require: true },
+const workoutSessionSchema = new mongoose.Schema({
+  Userid: { type: String, required: true },
   Date: { type: Date, default: Date.now },
   exercises: { type: String, require: true },
   Sets: [
@@ -11,3 +11,7 @@ const workoutSessionSchema = new mongoose.schema({
     },
   ],
 });
+
+const WorkoutSession = mongoose.model("WorkoutSession", workoutSessionSchema);
+
+module.exports = WorkoutSession;
