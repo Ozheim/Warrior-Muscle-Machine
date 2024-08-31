@@ -1,6 +1,46 @@
 .modal-overlay{
-    width: 500px;
+    width: 30%;
     height: 500px;
     background-color: grey;
     border-radius: 20px ;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+  
+    
+}
+
+.modal-inner{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    flex-direction: column;
+
+        form {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                width: 100%;
+                align-items: center;
+            }
+
+
+   
+}
+
+
+button{
+    display: flex;
+}
+
+
+#weight{
+    width: 60px;
+}
+
+#reps{
+    width: 60px;
 }

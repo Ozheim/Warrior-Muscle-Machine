@@ -13,6 +13,11 @@ export default function Sidebar() {
     setIsSidebarVisible(!isSidebarVisible);
   };
 
+  const logout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/login";
+  };
+
   return (
     <div className="bg-blue-600">
       <span
@@ -93,7 +98,10 @@ export default function Sidebar() {
             Friends
           </h1>
         </div>
-        <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
+        <div
+          className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+          onClick={logout}
+        >
           <i className="bi bi-box-arrow-in-right"></i>
           <span className="text-[15px] ml-4 text-gray-200 font-bold">
             Logout
