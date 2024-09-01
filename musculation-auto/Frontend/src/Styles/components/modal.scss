@@ -15,8 +15,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-
     flex-direction: column;
+
+        h2{
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
 
         form {
                 position: relative;
@@ -25,22 +30,29 @@
                 gap: 10px;
                 width: 100%;
                 align-items: center;
+                flex-wrap: nowrap;
             }
 
-
-   
 }
-
-
-button{
+.form-container {
+    flex-grow: 1;
+    overflow-y: auto;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
+.exercice-form{
+    display: flex;
+    justify-content: center;
+}
 
-#weight{
+.weight {
     width: 60px;
 }
 
-#reps{
+.reps {
     width: 60px;
 }
+
+
