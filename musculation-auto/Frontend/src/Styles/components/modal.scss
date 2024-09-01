@@ -1,14 +1,29 @@
+@import "../Mixins.scss";
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .modal-overlay{
     width: 30%;
     height: 500px;
     background-color: grey;
+    box-shadow: 5px 5px 5px #333333;
     border-radius: 20px ;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    @include font-primary;
+    @include font-size(16px);
 
-  
-    
 }
 
 .modal-inner{
@@ -16,11 +31,14 @@
     justify-content: center;
     width: 100%;
     flex-direction: column;
+    color: #f0f0f0; 
 
         h2{
             display: flex;
             justify-content: center;
             padding: 20px 0;
+            @include font-size(26px);
+            color: #f0f0f0;
         }
 
         form {
@@ -34,25 +52,80 @@
             }
 
 }
+
 .form-container {
     flex-grow: 1;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    color: black;
 }
 
 .exercice-form{
     display: flex;
     justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    
+    
+}
+
+.exercice{
+    border: 1px solid #FFFACD;
+    box-shadow: 2px 2px 2px #E0D8B0;
+    border-radius: 10px;
 }
 
 .weight {
+    border: 1px solid #FFFACD;
+    box-shadow: 2px 2px 2px #E0D8B0;
     width: 60px;
+    border-radius: 10px;
 }
 
 .reps {
+    border: 1px solid #FFFACD;
+    box-shadow: 2px 2px 2px #E0D8B0;
+    border-radius: 10px;
     width: 60px;
 }
 
 
+.button-container{
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;         
+}   
+
+
+.button-container button:active {
+    transform: scale(0.85);
+    transition: transform 0.1s ease;
+}
+
+.plus{
+        margin-top: 5px;
+        padding: 10px 10px;
+        border: 1px solid #E0D8B0 ;
+        box-shadow: 2px 2px  #E0D8B0;
+        border-radius: 20px;
+        background-color: white;
+        color: #f0f0f0;
+        cursor: pointer;
+}
+
+#validation{
+    margin-top: 5px;
+        padding: 10px 20px;
+        border: 1px solid #E0D8B0;
+        box-shadow: 2px 2px #E0D8B0;
+        border-radius: 20px;
+        background-color: white;
+        color: #f0f0f0;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+    
+    
+}

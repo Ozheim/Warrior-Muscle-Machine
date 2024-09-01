@@ -8,3 +8,24 @@
             object-fit: cover;
 
 }
+
+
+@mixin font-size($size) {
+    font-size: $size;
+
+    @media (max-width: 1200px) {
+        font-size: $size * 0.9; 
+    }
+
+    @media (max-width: 768px) {
+        font-size: $size * 0.8; 
+    }
+
+    @media (max-width: 480px) {
+        font-size: $size * 0.7; 
+    }
+}
+
+@mixin font-primary {
+    font-family: 'Montserrat', sans-serif;
+}

@@ -27,7 +27,7 @@ const Dashboard = () => {
   }, [token]);
 
   return (
-    <div className="ff">
+    <div className="ff" id="main-content">
       <div className="header-dashboard">
         <img src={WMM} alt="logo" className="logo" />
       </div>

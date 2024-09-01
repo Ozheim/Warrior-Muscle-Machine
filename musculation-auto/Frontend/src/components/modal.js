@@ -1,5 +1,7 @@
 import "../Styles/components/modal.scss";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Modal = ({ isOpen, onClose }) => {
   const sendData = () => {
@@ -23,11 +25,13 @@ const Modal = ({ isOpen, onClose }) => {
     newWeightInput.type = "number";
     newWeightInput.name = "weight";
     newWeightInput.className = "weight";
+    newWeightInput.placeholder = "Kg";
     newWeightInput.required = true;
 
     const newRepInput = document.createElement("input");
     newRepInput.type = "number";
     newRepInput.name = "repetitions";
+    newRepInput.placeholder = "rep";
     newRepInput.className = "reps";
     newRepInput.required = true;
 
@@ -55,16 +59,29 @@ const Modal = ({ isOpen, onClose }) => {
               placeholder="votre exercice"
               required
             />
-            <input type="number" name="weight" className="weight" required />
-            <input type="number" className="reps" name="repetitions" required />
+            <input
+              type="number"
+              name="weight"
+              className="weight"
+              placeholder="Kg"
+              required
+            />
+            <input
+              type="number"
+              className="reps"
+              name="repetitions"
+              placeholder="rep"
+              required
+            />
           </div>
         </div>
 
         <div className="button-container">
           <button type="button" onClick={addExercice}>
-            +
+            <FontAwesomeIcon icon={faPlus} className="plus" />
           </button>
-          <button type="button" onClick={sendData}>
+
+          <button type="button" onClick={sendData} id="validation">
             Valider
           </button>
         </div>
