@@ -81,12 +81,17 @@ const Modal = ({ isOpen, onClose }) => {
             <FontAwesomeIcon icon={faPlus} className="plus" />
           </button>
 
-          <button type="button" onClick={sendData} id="validation">
-            Valider
+          <button
+            type="button"
+            onClick={sendData}
+            className="validation-button"
+          >
+            <p>valider</p>
           </button>
         </div>
-
-        <button onClick={onClose}>Fermer la modale</button>
+        <button onClick={onClose} id="close-modal">
+          <span>Fermer la modale</span>
+        </button>
       </div>
     </div>
   );

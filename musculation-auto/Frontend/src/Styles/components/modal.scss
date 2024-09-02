@@ -13,8 +13,9 @@ input[type="number"] {
 }
 
 .modal-overlay{
-    width: 30%;
-    height: 500px;
+    position: absolute;
+    width: 32%;
+    height: 60vh;
     background-color: grey;
     box-shadow: 5px 5px 5px #333333;
     border-radius: 20px ;
@@ -22,14 +23,23 @@ input[type="number"] {
     flex-direction: column;
     box-sizing: border-box;
     @include font-primary;
-    @include font-size(16px);
+    @include font-size(16px);   
+    
 
+}
+
+.modal-inner input,
+.modal-inner button {
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .modal-inner{
     display: flex;
     justify-content: center;
+    max-width: 70vh;
     width: 100%;
+    max-height: 60vh;
     flex-direction: column;
     color: #f0f0f0; 
 
@@ -114,10 +124,17 @@ input[type="number"] {
         background-color: white;
         color: #f0f0f0;
         cursor: pointer;
+        color: grey;
 }
+.validation-button{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
 
-#validation{
-    margin-top: 5px;
+    p{
+        width: 20%;
+        margin-top: 5px;
         padding: 10px 20px;
         border: 1px solid #E0D8B0;
         box-shadow: 2px 2px #E0D8B0;
@@ -126,6 +143,18 @@ input[type="number"] {
         color: #f0f0f0;
         cursor: pointer;
         transition: transform 0.1s ease;
+        color: grey;
+        
+    }
+
     
+       
     
 }
+
+
+#close-modal{
+    padding-top: 8px;
+}
+
+    
