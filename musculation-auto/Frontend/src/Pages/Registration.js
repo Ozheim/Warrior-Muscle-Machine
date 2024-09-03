@@ -1,6 +1,6 @@
 import WMM from "../assets/WMM.png";
 import "../Styles/Pages/Registration.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Backgroundimage from "../assets/create_account.png";
 import { useState } from "react";
 import axios from "axios";
@@ -8,6 +8,8 @@ import axios from "axios";
 export default function Registration() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const signUp = async (event) => {
     event.preventDefault();
@@ -17,7 +19,8 @@ export default function Registration() {
         url: "http://localhost:5000/api/auth/signup",
         data: { email, password },
       });
-      console.log(response.data);
+      localStorage.setItem("token", response.data.token);
+      navigate(`/Dashboard/${response.data.userId}`);
     } catch (error) {
       console.log(error);
     }

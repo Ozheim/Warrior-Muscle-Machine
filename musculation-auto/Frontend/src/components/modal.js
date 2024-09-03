@@ -2,12 +2,9 @@ import "../Styles/components/modal.scss";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import sendData from "../utils/Senddata.js";
 
 const Modal = ({ isOpen, onClose }) => {
-  const sendData = () => {
-    "";
-  };
-
   const addExercice = (e) => {
     e.preventDefault();
 
@@ -43,13 +40,24 @@ const Modal = ({ isOpen, onClose }) => {
     formContainer.appendChild(newForm);
   };
 
+  const inputDate = () => (
+    <h2>
+      <input
+        type="Date"
+        className="date"
+        name="date"
+        placeholder="Date de votre séance"
+        required
+      />
+    </h2>
+  );
+
   if (!isOpen) return null;
 
   return (
     <div className="modal-overlay">
       <div className="modal-inner">
-        <h2>Ajouter une nouvelle séance</h2>
-
+        <h2>{inputDate()}</h2>
         <div className="form-container">
           <div className="exercice-form">
             <input

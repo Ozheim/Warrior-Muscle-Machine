@@ -1,9 +1,9 @@
 import Sidebar from "../components/Sidebar";
 import "../Styles/Pages/Dashboard.scss";
 import WMM from "../assets/WMM.png";
-import InitialDashboard from "../components/initialdashboard.js";
+import InitialDashboard from "./initialdashboard.js";
 import React, { useState, useEffect } from "react";
-import MainDashboard from "../components/MainDashboard.js";
+import Maindashboard from "./Maindashboard.js";
 
 const Dashboard = () => {
   const [hasSessions, setHasSessions] = useState(null);
@@ -33,7 +33,7 @@ const Dashboard = () => {
       </div>
       <Sidebar />
 
-      {hasSessions ? <MainDashboard /> : <InitialDashboard />}
+      {hasSessions ? <Maindashboard /> : <InitialDashboard />}
     </div>
   );
 };
