@@ -98,7 +98,7 @@ const Modal = ({ isOpen, onClose }) => {
           </button>
         </div>
         <button onClick={onClose} id="close-modal">
-          <span>Fermer la modale</span>
+          <span>Fermer</span>
         </button>
       </div>
     </div>

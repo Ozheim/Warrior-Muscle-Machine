@@ -19,7 +19,7 @@ export default function Navbar() {
     "flex items-center justify-between p-6 lg:px-8",
     {
       "bg-transparent":
-        location.pathname === "/" || location.pathname === "/Home",
+        location.pathname === "/" || location.pathname === "/home",
       "bg-gray-900": location.pathname !== "/" && location.pathname !== "/Home",
     }
   );
