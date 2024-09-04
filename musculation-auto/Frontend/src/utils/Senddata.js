@@ -34,6 +34,7 @@ const sendData = async () => {
 
       if (response.ok) {
         console.log("Séance enregistrée avec succès");
+        window.location.reload();
       } else {
         console.error("Erreur lors de l'enregistrement de la séance");
       }

@@ -1,4 +1,4 @@
-const WorkoutSession = require("../models/WorkoutSession");
+const WorkoutSession = require("../models/Workoutsession");
 
 exports.saveWorkoutSession = async (req, res) => {
   try {
@@ -6,13 +6,12 @@ exports.saveWorkoutSession = async (req, res) => {
 
     if (!userId || !date || !sessions || sessions.length === 0) {
       return res.status(400).json({
-        message:
-          "Données invalides. Veuillez fournir toutes les informations requises.",
+        message: " Please provide all required information.",
       });
     }
 
     const newWorkoutSession = new WorkoutSession({
-      Userid: userId,
+      Userid: req.auth.userId,
       Date: date,
       exercises: sessions.map((session) => session.exercice).join(", "),
       Sets: sessions.map((session) => ({
@@ -24,13 +23,11 @@ exports.saveWorkoutSession = async (req, res) => {
     await newWorkoutSession.save();
 
     return res.status(201).json({
-      message: "Séance enregistrée avec succès.",
+      message: "Workout session  saved.",
       session: newWorkoutSession,
     });
   } catch (error) {
-    console.error("Erreur lors de l'enregistrement de la séance :", error);
-    return res
-      .status(500)
-      .json({ message: "Erreur du serveur. Veuillez réessayer plus tard." });
+    console.error("Error while saving the workout session:", error);
+    return res.status(500).json({ message: "Server error" });
   }
 };

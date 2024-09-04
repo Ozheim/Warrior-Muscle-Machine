@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "../components/modal.js";
 import "../Styles/components/Initialdashboard.scss";
 
-const InitialDashboard = ({ SessionAdded }) => {
+const InitialDashboard = () => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => setShowModal(true);

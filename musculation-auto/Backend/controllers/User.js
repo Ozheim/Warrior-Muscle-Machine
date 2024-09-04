@@ -56,17 +56,19 @@ exports.login = (req, res, next) => {
 
 exports.checkSessionExists = async (req, res) => {
   try {
-    const userId = req.auth.userId;
+    const userId = req.auth.userId.toString();
 
-    const session = await workoutsession.findOne({ userId: userId });
+    const session = await workoutsession.findOne({ Userid: userId });
 
     if (session) {
-      res.json({ sessionExists: true });
+      console.log("Session found:", session);
+      return res.status(200).json({ sessionExists: true });
     } else {
-      res.json({ sessionExists: false });
+      console.log("No session found for this user");
+      return res.status(200).json({ sessionExists: false });
     }
   } catch (err) {
-    console.error("Erreur lors de la vérification des sessions:", err);
-    res.status(500).json({ error: "Erreur du serveur" });
+    console.log("Error while checking session:", err);
+    return res.status(500).json({ error: "Server error" });
   }
 };

@@ -13,7 +13,8 @@ const Dashboard = () => {
     fetch("http://localhost:5000/api/auth/user/sessions/exist", {
       method: "GET",
       headers: {
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + localStorage.getItem("token"),
+        "Content-Type": "application/json",
       },
     })
       .then((response) => response.json())
