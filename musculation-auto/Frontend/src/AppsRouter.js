@@ -7,6 +7,7 @@ import About from "./Pages/About.js";
 import Registration from "./Pages/Registration.js";
 import ResetPassword from "./Pages/Resetpassword.js";
 import Dashboard from "./Pages/Dashboard.js";
+import News from "./Pages/News.js";
 
 function Approuter() {
   return (
@@ -17,6 +18,7 @@ function Approuter() {
       <Route path="/forgotPassword" element={<ResetPassword />} />
       <Route path="/" element={<Home />} />
       <Route path="/Dashboard/:userId" element={<Dashboard />} />
+      <Route path="/News" element={<News />} />
       <Route path="*" element={<Notfound />} />
       <Route path="/About" element={<About />} />
     </Routes>

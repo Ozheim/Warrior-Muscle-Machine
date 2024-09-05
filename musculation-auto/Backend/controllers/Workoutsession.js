@@ -1,6 +1,6 @@
 const WorkoutSession = require("../models/Workoutsession");
 
-exports.saveWorkoutSession = async (req, res) => {
+exports.saveWorkoutSession = async (req, res, next) => {
   try {
     const { userId, date, sessions } = req.body;
 
@@ -29,5 +29,20 @@ exports.saveWorkoutSession = async (req, res) => {
   } catch (error) {
     console.error("Error while saving the workout session:", error);
     return res.status(500).json({ message: "Server error" });
+  }
+};
+
+exports.getSession = async (req, res) => {
+  try {
+    const userId = req.auth.userId;
+    const sessions = await WorkoutSession.find({ Userid: userId });
+
+    if (sessions.length > 0) {
+      return res.status(200).json(sessions);
+    } else {
+      return res.status(404).json({ message: " il y a pas de session " });
+    }
+  } catch (error) {
+    return res.status(500).json({ message: "erreur du serveur " });
   }
 };

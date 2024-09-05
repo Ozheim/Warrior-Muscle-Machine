@@ -8,5 +8,6 @@ router.post("/signup", userCtrl.signup);
 router.post("/login", userCtrl.login);
 router.get("/user/sessions/exist", auth, userCtrl.checkSessionExists);
 router.post("/saveWorkoutSession", auth, sessionCtrl.saveWorkoutSession);
+router.get("/user/session", auth, sessionCtrl.getSession);
 
 module.exports = router;
