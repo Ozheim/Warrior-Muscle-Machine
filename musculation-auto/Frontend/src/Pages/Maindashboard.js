@@ -1,27 +1,72 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Modal from "../components/modal";
+import { getWeek, getDay } from "date-fns";
+
 const MainDashboard = () => {
+  const [seances, setSeances] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/api/auth/user/session", {
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("token"),
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        setSeances(response.data);
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.error("Erreur lors de la récupération des séances :", error);
+      });
+  }, []);
+
+  const buttonClick = (day) => {
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <>
       <header>
         <h1>Performance</h1>
       </header>
 
-      <body>
+      <div>
         <table>
           <thead>
             <tr>
-              <th>semaine 1 </th>
-              <th>semaine 2</th>
-              <th>semaine 3</th>
-              <th>semaine 4</th>
-              <th>semaine 5</th>
-              <th>semaine 6</th>
+              <th>Semaine 1</th>
+              <th>Semaine 2</th>
+              <th>Semaine 3</th>
+              <th>Semaine 4</th>
+              <th>Semaine 5</th>
+              <th>Semaine 6</th>
             </tr>
           </thead>
           <tbody>
-            <td></td>
+            {[1, 2, 3, 4, 5, 6, 7].map((day) => (
+              <tr key={day}>
+                {[1, 2, 3, 4, 5, 6].map((week) => (
+                  <td key={week}>
+                    <button
+                      onClick={() => buttonClick(day)}
+                    >{` Jour ${day}`}</button>
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
-      </body>
+      </div>
+
+      <Modal isOpen={modalOpen} onClose={closeModal} />
     </>
   );
 };

@@ -1,5 +1,5 @@
 import "../Styles/components/modal.scss";
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import sendData from "../utils/Senddata.js";
@@ -39,17 +39,46 @@ const Modal = ({ isOpen, onClose }) => {
     const formContainer = document.querySelector(".form-container");
     formContainer.appendChild(newForm);
   };
+  const [selectWeek, setSelectWeek] = useState("");
+  const [selectDay, setSelectDay] = useState("");
+
+  const selectedWeek = (e) => {
+    setSelectWeek(parseInt(e.target.value));
+  };
+
+  const SelectedDay = (e) => {
+    setSelectDay(parseInt(e.target.value));
+  };
 
   const inputDate = () => (
-    <h2>
-      <input
-        type="Date"
-        className="date"
-        name="date"
-        placeholder="Date de votre séance"
-        required
-      />
-    </h2>
+    <div>
+      <label htmlFor="semaine"></label>
+      <select name={selectWeek} id="week-choice" onChange={selectedWeek}>
+        <option value="" disabled>
+          -- Sélectionner une semaine --
+        </option>
+        <option value="1">Semaine 1</option>
+        <option value="2">Semaine 2</option>
+        <option value="3">Semaine 3</option>
+        <option value="4">Semaine 4</option>
+        <option value="5">Semaine 5</option>
+        <option value="6">Semaine 6</option>
+      </select>
+
+      <label htmlFor="jour"></label>
+      <select name={selectDay} onChange={SelectedDay} id="day-choice">
+        <option value="" disabled>
+          -- Selectionner un jour --
+        </option>
+        <option value="1">jour 1</option>
+        <option value="2">jour 2</option>
+        <option value="3">jour 3</option>
+        <option value="4">jour 4</option>
+        <option value="5">jour 5</option>
+        <option value="6">jour 6</option>
+        <option value="7">jour 7</option>
+      </select>
+    </div>
   );
 
   if (!isOpen) return null;
