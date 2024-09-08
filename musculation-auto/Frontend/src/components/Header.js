@@ -8,7 +8,8 @@ import classNames from "classnames";
 const navigation = [
   { name: "Accueil", href: "/Home" },
   { name: "A propos", href: "/About" },
-  { name: "Nouveauté", href: "/News" },
+  { name: "Prochainement", href: "/Soon" },
+  { name: "Contact", href: "/Contact" },
 ];
 
 export default function Navbar() {

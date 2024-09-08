@@ -1,0 +1,40 @@
+@import "../Mixins.scss";
+
+
+
+h1 {
+    @include font-size(32px)
+}
+
+h2, h3, h4, h5 {
+    @include font-size(24px)
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 11% 0 0 0;
+}
+
+
+.flex-start-title-soonPage,
+.flex-start-p-soonPage {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 0 0 20px;
+    width: 50%;
+    word-break: keep-all;
+    
+}
+ 
+.flex-end-p-soonPage,
+.flex-end-title-soonPage{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 50%;
+    padding-right: 30px;
+    word-break: keep-all;
+}
+

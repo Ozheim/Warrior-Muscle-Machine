@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "../components/modal.js";
-import "../Styles/components/Initialdashboard.scss";
+import "../Styles/Pages/Initialdashboard.scss";
 
 const InitialDashboard = () => {
   const [showModal, setShowModal] = useState(false);

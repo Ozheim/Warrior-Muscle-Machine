@@ -39,16 +39,13 @@ export function Footer() {
               <Link to="/Home">Accueil</Link>
             </li>
             <li>
-              <Link to="/Nouveauté">Nouveauté</Link>
-            </li>
-            <li>
               <Link to="/About">A propos</Link>
             </li>
             <li>
-              <Link to="/Contact">Contact</Link>
+              <Link to="/Nouveauté">Prochainement</Link>
             </li>
             <li>
-              <Link to="/Emploi">Emploi</Link>
+              <Link to="/Contact">Contact</Link>
             </li>
           </ul>
         </>

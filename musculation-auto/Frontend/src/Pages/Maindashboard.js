@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "../components/modal";
-import { getWeek, getDay } from "date-fns";
+import "../Styles/Pages/MainDashboard.scss";
 
 const MainDashboard = () => {
   const [seances, setSeances] = useState([]);
@@ -35,10 +35,10 @@ const MainDashboard = () => {
   return (
     <>
       <header>
-        <h1>Performance</h1>
+        <h1>Vos performances</h1>
       </header>
 
-      <div>
+      <div className="table-container">
         <table>
           <thead>
             <tr>

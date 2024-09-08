@@ -7,7 +7,8 @@ import About from "./Pages/About.js";
 import Registration from "./Pages/Registration.js";
 import ResetPassword from "./Pages/Resetpassword.js";
 import Dashboard from "./Pages/Dashboard.js";
-import News from "./Pages/News.js";
+import Soon from "./Pages/Soon.js";
+import Contact from "./Pages/Contact.js";
 
 function Approuter() {
   return (
@@ -18,9 +19,10 @@ function Approuter() {
       <Route path="/forgotPassword" element={<ResetPassword />} />
       <Route path="/" element={<Home />} />
       <Route path="/Dashboard/:userId" element={<Dashboard />} />
-      <Route path="/News" element={<News />} />
+      <Route path="/Soon" element={<Soon />} />
       <Route path="*" element={<Notfound />} />
       <Route path="/About" element={<About />} />
+      <Route path="/Contact" element={<Contact />} />
     </Routes>
   );
 }
