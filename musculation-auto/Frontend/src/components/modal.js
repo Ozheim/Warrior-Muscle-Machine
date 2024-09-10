@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import sendData from "../utils/Senddata.js";
 
-const Modal = ({ isOpen, onClose }) => {
+const Modal = ({ isOpen, onClose, selectedCycle }) => {
   const addExercice = (e) => {
     e.preventDefault();
 
@@ -51,7 +51,7 @@ const Modal = ({ isOpen, onClose }) => {
   };
 
   const inputDate = () => (
-    <div>
+    <div className="date-container">
       <label htmlFor="semaine"></label>
       <select name={selectWeek} id="week-choice" onChange={selectedWeek}>
         <option value="" disabled>
@@ -120,7 +120,7 @@ const Modal = ({ isOpen, onClose }) => {
 
           <button
             type="button"
-            onClick={sendData}
+            onClick={() => sendData(selectedCycle)}
             className="validation-button"
           >
             <p>valider</p>

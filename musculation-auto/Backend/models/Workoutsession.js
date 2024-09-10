@@ -3,6 +3,7 @@ const workoutSessionSchema = new mongoose.Schema({
   Userid: { type: String, required: true },
   week: { type: Number, required: true },
   day: { type: Number, required: true },
+  cycle: { type: Number, required: true },
   exercises: { type: String, required: true },
   Sets: [
     {

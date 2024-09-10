@@ -1,4 +1,4 @@
-const sendData = async () => {
+const sendData = async (selectedCycle) => {
   const forms = document.querySelectorAll(".exercice-form");
   const token = localStorage.getItem("token");
   const userId = localStorage.getItem("userId");
@@ -20,9 +20,10 @@ const sendData = async () => {
   });
 
   if (week && day && sessions.length > 0) {
+    console.log("selectedCycle:", selectedCycle);
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/saveWorkoutSession",
+        "http://localhost:5000/api/auth/user/saveWorkoutSession",
         {
           method: "POST",
           headers: {
@@ -33,6 +34,7 @@ const sendData = async () => {
             userId: userId,
             week: parseInt(week),
             day: parseInt(day),
+            cycle: selectedCycle,
             sessions: sessions,
           }),
         }
@@ -48,7 +50,7 @@ const sendData = async () => {
       console.error("Erreur serveur :", error);
     }
   } else {
-    alert("Veuillez remplir tout les champs");
+    alert("Veuillez remplir tous les champs.");
   }
 };
 
