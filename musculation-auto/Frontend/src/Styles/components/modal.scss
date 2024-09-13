@@ -18,7 +18,7 @@ input[type="number"] {
     left: 35%;
     width: 32%;
     height: 60vh;
-    background-color: grey;
+    background-color: hsl(0, 4%, 63%);
     box-shadow: 5px 5px 5px #333333;
     border-radius: 20px ;
     display: flex;
@@ -84,21 +84,21 @@ input[type="number"] {
 }
 
 .exercice{
-    border: 1px solid #FFFACD;
-    box-shadow: 2px 2px 2px #E0D8B0;
+    border: 1px solid #6d2733;
+    box-shadow: 2px 2px 2px #6d2733;
     border-radius: 10px;
 }
 
 .weight {
-    border: 1px solid #FFFACD;
-    box-shadow: 2px 2px 2px #E0D8B0;
+    border: 1px solid#6d2733;
+    box-shadow: 2px 2px 2px #6d2733;
     width: 60px;
     border-radius: 10px;
 }
 
 .reps {
-    border: 1px solid #FFFACD;
-    box-shadow: 2px 2px 2px #E0D8B0;
+    border: 1px solid #6d2733;
+    box-shadow: 2px 2px 2px #6d2733;
     border-radius: 10px;
     width: 60px;
 }
@@ -120,8 +120,8 @@ input[type="number"] {
 .plus{
         margin-top: 5px;
         padding: 10px 10px;
-        border: 1px solid #E0D8B0 ;
-        box-shadow: 2px 2px  #E0D8B0;
+        border: 1px solid #6d2733 ;
+        box-shadow: 2px 2px #6d2733;
         border-radius: 20px;
         background-color: white;
         color: #f0f0f0;
@@ -138,8 +138,8 @@ input[type="number"] {
         width: 20%;
         margin-top: 5px;
         padding: 10px 20px;
-        border: 1px solid #E0D8B0;
-        box-shadow: 2px 2px #E0D8B0;
+        border: 1px solid #6d2733;
+        box-shadow: 2px 2px #6d2733;
         border-radius: 20px;
         background-color: white;
         color: #f0f0f0;
@@ -148,10 +148,6 @@ input[type="number"] {
         color: grey;
         
     }
-
-    
-       
-    
 }
 
 
@@ -162,6 +158,7 @@ input[type="number"] {
 .date-container{
     display: flex;
     color: grey;
+    gap: 5px;
     
         
     select {
@@ -170,9 +167,14 @@ input[type="number"] {
 
     #week-choice{
         width: 50%;
+        border: 1px solid #6d2733;
+        box-shadow: 2px 2px #6d2733;
+
     }
  
     #day-choice{
         width: 50%;
+        border: 1px solid #6d2733;
+        box-shadow: 2px 2px #6d2733;
     }
 } 

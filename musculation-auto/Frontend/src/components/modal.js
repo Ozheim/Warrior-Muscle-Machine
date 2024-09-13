@@ -110,6 +110,11 @@ const Modal = ({ isOpen, onClose, selectedCycle }) => {
               placeholder="rep"
               required
             />
+            <div className="add-repetition-container">
+              <button type="button">
+                <FontAwesomeIcon icon={faPlus} className="plus" />
+              </button>
+            </div>
           </div>
         </div>
 

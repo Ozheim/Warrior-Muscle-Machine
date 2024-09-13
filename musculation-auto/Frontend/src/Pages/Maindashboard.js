@@ -79,7 +79,9 @@ const MainDashboard = () => {
                   <td key={week}>
                     <button
                       className={
-                        checkSessionForDay(week, day) ? "have-session" : ""
+                        checkSessionForDay(week, day)
+                          ? "have-session"
+                          : "no-session-found "
                       }
                       onClick={() => buttonClick(day)}
                     >

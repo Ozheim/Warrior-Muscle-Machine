@@ -45,7 +45,6 @@
         button {
             width: 90%;
             padding: 10px;
-            background-color: #f4f4f4;
             border: none;
             cursor: pointer;
         }
@@ -54,9 +53,13 @@
 
 
 .have-session {
-    background-color: red;
+    background-color: #6d2733;
+    border-radius: 10px;
+    color: #fff5e6;
 }
 
-.no-session {
-    background-color: grey;
+.no-session-found {
+    background-color: #f4f4f4;
+    color: #898989;
 }
+
