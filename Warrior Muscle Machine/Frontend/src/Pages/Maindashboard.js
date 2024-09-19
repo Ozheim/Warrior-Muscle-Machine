@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Modal from "../components/modal";
 import "../Styles/Pages/MainDashboard.scss";
+import SessionAddedModal from "../components/SessionAddedModal";
 
 const MainDashboard = () => {
   const [seances, setSeances] = useState([]);

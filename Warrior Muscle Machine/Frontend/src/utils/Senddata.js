@@ -1,6 +1,7 @@
 const sendData = async (selectedCycle) => {
   const forms = document.querySelectorAll(".exercice-form");
   const token = localStorage.getItem("token");
+  console.log(token);
   const userId = localStorage.getItem("userId");
   const sessions = [];
 

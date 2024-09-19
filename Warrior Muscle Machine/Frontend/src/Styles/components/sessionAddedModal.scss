@@ -1,0 +1,10 @@
+@import "../Mixins.scss";
+
+
+.modal-title{
+    display: flex;
+    justify-content: center ;
+    padding: 10px 0 0 0;
+    @include font-primary;
+
+}
