@@ -1,6 +1,6 @@
 const WorkoutSession = require("../models/Workoutsession");
 
-exports.saveWorkoutSession = async (req, res, next) => {
+exports.saveWorkoutSession = async (req, res) => {
   try {
     const { userId, week, day, sessions, cycle } = req.body;
 
@@ -12,7 +12,7 @@ exports.saveWorkoutSession = async (req, res, next) => {
       sessions.length === 0 ||
       !cycle
     ) {
-      console.log("Champs manquants ou invalides");
+      console.log("Missing or invalid fields");
       return res.status(400).json({
         message: "Please provide all required information.",
       });
@@ -36,7 +36,7 @@ exports.saveWorkoutSession = async (req, res, next) => {
       session: newWorkoutSession,
     });
   } catch (error) {
-    console.error("Erreur lors de la sauvegarde :", error);
+    console.error("Error while saving:", error);
     return res.status(500).json({ message: "Server error" });
   }
 };
@@ -51,7 +51,7 @@ exports.getSession = async (req, res) => {
       query.cycle = parseInt(cycle, 10);
     }
 
-    console.log("Requête MongoDB avec le cycle :", query);
+    console.log("MongoDB query with cycle:", query);
 
     const sessions = await WorkoutSession.find(query);
 
@@ -60,9 +60,67 @@ exports.getSession = async (req, res) => {
     } else {
       return res
         .status(404)
-        .json({ message: "Pas de séance trouvée pour ce cycle" });
+        .json({ message: "No session found for this cycle" });
     }
   } catch (error) {
-    return res.status(500).json({ message: "Erreur du serveur" });
+    return res.status(500).json({ message: "Server error" });
+  }
+};
+
+exports.getWeek = async (req, res) => {
+  try {
+    const userId = req.auth.userId;
+
+    const weekSessions = await WorkoutSession.find({
+      Userid: userId,
+      week: req.query.week,
+    });
+
+    if (weekSessions.length > 0) {
+      return res.status(200).json(weekSessions);
+    } else {
+      return res.status(404).json({ message: "No week found." });
+    }
+  } catch (error) {
+    console.error("Error retrieving the week:", error);
+    return res.status(500).json({ message: "Server error." });
+  }
+};
+
+exports.getDay = async (req, res) => {
+  try {
+    const userId = req.auth.userId;
+
+    const daySessions = await WorkoutSession.find({
+      Userid: userId,
+      week: req.query.week,
+      day: req.query.day,
+    });
+
+    if (daySessions.length > 0) {
+      return res.status(200).json(daySessions);
+    } else {
+      return res.status(404).json({ message: "No day found." });
+    }
+  } catch (error) {
+    console.error("Error retrieving the day:", error);
+    return res.status(500).json({ message: "Server error." });
+  }
+};
+
+exports.getExercice = async (req, res) => {
+  try {
+    const userId = req.auth.userId;
+
+    const exercises = await WorkoutSession.find({ Userid: userId });
+
+    if (exercises.length > 0) {
+      return res.status(200).json(exercises);
+    } else {
+      return res.status(404).json({ message: "No exercise found." });
+    }
+  } catch (error) {
+    console.error("Error retrieving exercises:", error);
+    return res.status(500).json({ message: "Server error." });
   }
 };

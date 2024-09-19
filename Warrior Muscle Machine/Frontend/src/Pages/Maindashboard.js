@@ -26,7 +26,7 @@ const MainDashboard = () => {
       });
   }, [selectedCycle]);
 
-  const buttonClick = (day) => {
+  const buttonClick = () => {
     setModalOpen(true);
   };
 
