@@ -8,6 +8,7 @@ import Maindashboard from "./Maindashboard.js";
 const Dashboard = () => {
   const [hasSessions, setHasSessions] = useState(null);
   const token = localStorage.getItem("token");
+  const [selectedCycle, setSelectedCycle] = useState(1);
 
   useEffect(() => {
     fetch("http://localhost:5000/api/auth/user/sessions/exist", {
@@ -34,7 +35,17 @@ const Dashboard = () => {
       </div>
       <Sidebar />
 
-      {hasSessions ? <Maindashboard /> : <InitialDashboard />}
+      {hasSessions ? (
+        <Maindashboard
+          selectedCycle={selectedCycle}
+          setSelectedCycle={setSelectedCycle}
+        />
+      ) : (
+        <InitialDashboard
+          selectedCycle={selectedCycle}
+          setSelectedCycle={setSelectedCycle}
+        />
+      )}
     </div>
   );
 };

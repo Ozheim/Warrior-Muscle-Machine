@@ -1,19 +1,103 @@
-Warrior Muscle Machine
-Description
+# Warrior Muscle Machine
+
+<p align="center">
+  <img src="https://github.com/Ozheim/Warrior-Muscle-Machine/raw/main/Warrior%20Muscle%20Machine/Frontend/src/assets/WMM.png" alt="Logo du projet" />
+</p>
+
 Warrior Muscle Machine est une application full-stack permettant aux utilisateurs de gérer leurs séances d'entraînement. Le backend est développé avec Node.js/Express et MongoDB, tandis que le frontend utilise React.js avec TailwindCSS et SCSS. L'application offre une interface moderne et réactive avec authentification sécurisée via JWT.
 
-Fonctionnalités
-Gestion des utilisateurs : Inscription, connexion et sécurité avec JWT et bcrypt.
-Gestion des séances : Sauvegarde et récupération des sessions d'entraînement.
-UI moderne : Interface utilisateur stylée avec TailwindCSS et SCSS.
-Icônes : Utilisation de Font Awesome et Bootstrap Icons.
-Technologies
-Backend
-Node.js, Express.js, MongoDB (Mongoose)
-JWT pour l'authentification
-bcrypt pour les mots de passe
-Frontend
-React.js, React Router
-TailwindCSS et SCSS pour les styles
-Font Awesome et Bootstrap Icons pour les icônes
-Axios pour les requêtes API
+## État du projet
+
+Ce projet est en cours de développement. Certaines fonctionnalités sont encore en construction ou en phase de test.
+
+### Fonctionnalités à venir :
+
+- **Design de la page "Prochainement".**
+- **Construction de la page Contact.**
+- **Effets sur le footer.**
+- **Implémentation d'une intelligence artificielle pour conseiller l'utilisateur.**
+- **Implémentation de graphiques pour suivre la progression.**
+- **Ajout de la possibilité de modifier et supprimer une séance.**
+- **Une modal accueillant les séances depuis le backend, esthétique.**
+- **Responsive pour mobile et tablette.**
+- **Création d'une application mobile pour iOS et Android.**
+
+## Commencer
+
+Ces instructions vous permettront d'obtenir une copie du projet en local pour le développement et les tests. Consultez la section de déploiement pour des informations sur la mise en production.
+
+### Prérequis
+
+Voici ce dont vous avez besoin pour installer le projet et comment les installer :
+
+- **Node.js** (version 14 ou supérieure) : [Télécharger ici](https://nodejs.org/)
+- **MongoDB** (local ou en ligne) : [Installer MongoDB](https://www.mongodb.com/try/download/community)
+- **npm** (inclus avec Node.js pour la gestion des paquets)
+
+### Installation
+
+Suivez ces étapes pour configurer un environnement de développement en local :
+
+1. Clonez le dépôt :
+
+   ```bash
+   git clone https://github.com/Ozheim/Warrior-Muscle-Machine.git
+
+   ```
+
+2. Installez les dépendances:
+   ```bash
+   "@fortawesome/fontawesome-svg-core": "^6.6.0",
+   "@fortawesome/free-brands-svg-icons": "^6.6.0",
+   "@fortawesome/free-regular-svg-icons": "^6.6.0",
+   "@fortawesome/free-solid-svg-icons": "^6.6.0",
+   "@fortawesome/react-fontawesome": "^0.2.2",
+   "@headlessui/react": "^2.1.2",
+   "@heroicons/react": "^2.1.5",
+   "@material-tailwind/react": "^2.1.9",
+   "@tailwindcss/forms": "^0.5.7",
+   "@testing-library/jest-dom": "^5.17.0",
+   "@testing-library/react": "^13.4.0",
+   "@testing-library/user-event": "^13.5.0",
+   "axios": "^1.7.4",
+   "boostrap": "^2.0.0",
+   "bootstrap-icons": "^1.11.3",
+   "classnames": "^2.5.1",
+   "react": "^18.3.1",
+   "react-dom": "^18.3.1",
+   "react-router-dom": "^6.24.1",
+   "react-scripts": "5.0.1",
+   "web-vitals": "^2.1.4"
+   ```
+3. cd Warrior-Muscle-Machine/Frontend
+   npm install
+
+4. cd cd Warrior-Muscle-Machine/Backend
+   npm install
+
+5. configurez vos variables environnement:
+   creer un fichier .env en vous basant sur
+   les fichiers .env.example
+
+6. Lancez l'application :
+   Frontend:
+   npm run start
+   backend: nodemon server
+
+## Construit avec
+
+- Node.js - Backend runtime
+- Express - Node.js web framework
+- MongoDB - Database
+- React.js - Frontend library
+- TailwindCSS - CSS framework- Sass - CSS framework
+
+## Authors
+
+- Ozheim
+
+## Remerciement
+
+- My friend Lyniven
+
+- Merci à tous ceux qui ont testé l'application et donné des retours constructifs.

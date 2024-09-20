@@ -5,7 +5,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import sendData from "../utils/Senddata.js";
 
 const Modal = ({ isOpen, onClose, selectedCycle }) => {
-  selectedCycle = 1;
+  console.log(selectedCycle);
   const addExercice = (e) => {
     e.preventDefault();
 

@@ -4,10 +4,9 @@ import Modal from "../components/modal";
 import "../Styles/Pages/MainDashboard.scss";
 import SessionAddedModal from "../components/SessionAddedModal";
 
-const MainDashboard = () => {
+const MainDashboard = ({ selectedCycle, setSelectedCycle }) => {
   const [seances, setSeances] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedCycle, setSelectedCycle] = useState(1);
 
   useEffect(() => {
     axios

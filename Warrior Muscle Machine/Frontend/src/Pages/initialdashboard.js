@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import Modal from "../components/modal.js";
 import "../Styles/Pages/Initialdashboard.scss";
 
-const InitialDashboard = () => {
+const InitialDashboard = ({ selectedCycle, setSelectedCycle }) => {
   const [showModal, setShowModal] = useState(false);
-
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
 
