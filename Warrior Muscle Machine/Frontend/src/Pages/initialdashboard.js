@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Modal from "../components/modal.js";
 import "../Styles/Pages/Initialdashboard.scss";
 
 const InitialDashboard = ({ selectedCycle, setSelectedCycle }) => {
+  useEffect(() => {
+    setSelectedCycle(1);
+  }, []);
   const [showModal, setShowModal] = useState(false);
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
@@ -20,7 +23,11 @@ const InitialDashboard = ({ selectedCycle, setSelectedCycle }) => {
         <button onClick={openModal}>Ajouter une séance</button>
       </div>
       <div id="initial-modal">
-        <Modal isOpen={showModal} onClose={closeModal} />
+        <Modal
+          isOpen={showModal}
+          onClose={closeModal}
+          selectedCycle={selectedCycle}
+        />
       </div>
     </>
   );
