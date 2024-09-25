@@ -45,41 +45,17 @@ Suivez ces étapes pour configurer un environnement de développement en local :
 
    ```
 
-2. Installez les dépendances:
-   ```bash
-   "@fortawesome/fontawesome-svg-core": "^6.6.0",
-   "@fortawesome/free-brands-svg-icons": "^6.6.0",
-   "@fortawesome/free-regular-svg-icons": "^6.6.0",
-   "@fortawesome/free-solid-svg-icons": "^6.6.0",
-   "@fortawesome/react-fontawesome": "^0.2.2",
-   "@headlessui/react": "^2.1.2",
-   "@heroicons/react": "^2.1.5",
-   "@material-tailwind/react": "^2.1.9",
-   "@tailwindcss/forms": "^0.5.7",
-   "@testing-library/jest-dom": "^5.17.0",
-   "@testing-library/react": "^13.4.0",
-   "@testing-library/user-event": "^13.5.0",
-   "axios": "^1.7.4",
-   "boostrap": "^2.0.0",
-   "bootstrap-icons": "^1.11.3",
-   "classnames": "^2.5.1",
-   "react": "^18.3.1",
-   "react-dom": "^18.3.1",
-   "react-router-dom": "^6.24.1",
-   "react-scripts": "5.0.1",
-   "web-vitals": "^2.1.4"
-   ```
-3. cd Warrior-Muscle-Machine/Frontend
+2. cd Warrior-Muscle-Machine/Frontend
    npm install
 
-4. cd cd Warrior-Muscle-Machine/Backend
+3. cd cd Warrior-Muscle-Machine/Backend
    npm install
 
-5. configurez vos variables environnement:
+4. configurez vos variables environnement:
    creer un fichier .env en vous basant sur
    les fichiers .env.example
 
-6. Lancez l'application :
+5. Lancez l'application :
    Frontend:
    npm run start
    backend: nodemon server
