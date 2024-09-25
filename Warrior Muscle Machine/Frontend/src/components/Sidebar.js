@@ -29,7 +29,6 @@ export default function Sidebar() {
         <i className="bi bi-filter-left px-2 bg-gray-900 rounded-md"></i>
       </span>
 
-      {/* Sidebar */}
       <div
         className={`fixed top-0 bottom-0 left-0 p-2 w-[300px] bg-gray-900 text-white overflow-y-auto transition-transform duration-300 ${
           isSidebarVisible ? "translate-x-0" : "-translate-x-full"
