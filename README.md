@@ -53,9 +53,9 @@ Suivez ces étapes pour configurer un environnement de développement en local :
 
 4. configurez vos variables environnement:
    creer un fichier .env en vous basant sur
-   les fichiers .env.example
+   le fichier .env.example dans le backend
 
-5. Lancez l'application :
+6. Lancez l'application :
    Frontend:
    npm run start
    backend: nodemon server
