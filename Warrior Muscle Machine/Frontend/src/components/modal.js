@@ -32,13 +32,26 @@ const Modal = ({ isOpen, onClose, selectedCycle }) => {
     newRepInput.className = "reps";
     newRepInput.required = true;
 
+    const newRepsContainer = document.createElement("div");
+    newRepsContainer.className = "add-repetition-container";
+
+    const newRepButton = document.createElement("button");
+    newRepButton.type = "button";
+
+    const icon = document.createElement("button");
+    icon.className = "fas fa-plus plus"; // ca ne marche pas, faudrait trouver un autre moyen
+    newRepButton.appendChild(icon);
+
+    newRepsContainer.appendChild(newRepButton);
     newForm.appendChild(newExerciceInput);
     newForm.appendChild(newWeightInput);
     newForm.appendChild(newRepInput);
+    newForm.appendChild(newRepsContainer);
 
     const formContainer = document.querySelector(".form-container");
     formContainer.appendChild(newForm);
   };
+
   const [selectWeek, setSelectWeek] = useState("");
   const [selectDay, setSelectDay] = useState("");
 
