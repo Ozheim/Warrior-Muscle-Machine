@@ -46,19 +46,19 @@ Suivez ces étapes pour configurer un environnement de développement en local :
    ```
 
 2. cd Warrior-Muscle-Machine/Frontend
-   npm install
+   `npm install`
 
 3. cd cd Warrior-Muscle-Machine/Backend
-   npm install
+   `npm install`
 
 4. configurez vos variables environnement:
    creer un fichier .env en vous basant sur
-   les fichiers .env.example
+   le fichier .env.example dans le backend
 
-5. Lancez l'application :
+6. Lancez l'application :
    Frontend:
-   npm run start
-   backend: nodemon server
+   `npm run start`
+   backend: `nodemon server`
 
 ## Construit avec
 
